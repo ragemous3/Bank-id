@@ -1,5 +1,7 @@
 var https = require('https');
 var fs = require('fs');
+
+
 var BankID = {
 
     options: {
@@ -13,14 +15,15 @@ var BankID = {
         }),
         headers: {}
     },
-            //"certificatePolicies":["1.2.752.78.1.1"]
     authenticate: async function() {
 
+        //You can test it with this payload
+        //or send the payload with your personal personal number
+        //to payload.personalNumber (wich is the correct way)
         var payload = {
-            "endUserIp": "127.0.0.1",
-            "personalNumber":"199208290032",
+            "endUserIp": "",
+            "personalNumber":"",
             "requirement": {"autoStartTokenRequired":true},
-           // "userVisibleData": "IFRoaXMgaXMgYSBzYW1wbGUgdGV4dCB0byBiZSBzaWduZWQ="
         };
 
         var payloadBuffer = Buffer.from(JSON.stringify(payload));
@@ -43,10 +46,12 @@ var BankID = {
   sign: async function(){
     // var text = "Jag intygar att jag är mig själv";
     // text = text.toString("utf-8")
+
+    //Payload if website already have your personal-number
       var payload = {
-        "userVisibleData": Buffer.from("Signera skiten!", "utf-8").toString("base64"),
-        "endUserIp": "127.0.0.1",
-        "personalNumber":"199208290032"
+        "userVisibleData": Buffer.from("Sign it!", "utf-8").toString("base64"),
+        "endUserIp": "",
+        "personalNumber":""
       }
       this.options.path = '/rp/v5/sign'
       var payloadBuffer = Buffer.from(JSON.stringify(payload))
