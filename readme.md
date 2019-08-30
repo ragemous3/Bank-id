@@ -9,7 +9,6 @@ swedish bank-id test-api.
 for authenticate-method has to be implemented and put into
 the payload-object. Sign-method also needs connection to personal number DB</p>
 <br>
-<br>
 <p>A test-cert is required and so are ssl. Server is preprogrammed to
 get ssl from server/security and cert from server/cert</p>
 
