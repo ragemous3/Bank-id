@@ -15,6 +15,8 @@ get ssl from server/security and cert from server/cert</p>
 
 
 <h3>src</h3>
-https://test.bankid.com/Desktop
-https://help.bankid.com/BIDFiles/en/detta_ar_bankid.htm?ms=AQAQ&mw=MjQw&st=MA==&sct=MA==
-https://www.bankid.com/assets/bankid/rp/bankid-relying-party-guidelines-v3.2.2.pdf
+<ul>
+  <li>https://test.bankid.com/Desktop</li>
+  <li>https://help.bankid.com/BIDFiles/en/detta_ar_bankid.htm?ms=AQAQ&mw=MjQw&st=MA==&sct=MA==</li>
+  <li>https://www.bankid.com/assets/bankid/rp/bankid-relying-party-guidelines-v3.2.2.pdf</li>
+</ul>
